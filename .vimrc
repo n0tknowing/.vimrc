@@ -24,10 +24,15 @@ set expandtab
 set smartindent
 set noswapfile
 
-map <C-t> :tabnew<CR>
+set clipboard+=unnamedplus
+
 map <C-x> :q<CR>
-map <S-Left> gT<CR>
-map <S-Right> gt<CR>
+map <C-t> :tabnew<CR>
+map <S-Left> :tabprevious<CR>
+map <S-Right> :tabnext<CR>
+map <A-Left> :bp<CR>
+map <A-Right> :bn <CR>
+map <A-x> :bd<CR>
 
 autocmd TermOpen * setlocal nonu nornu
 
